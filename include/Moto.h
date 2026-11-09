@@ -3,6 +3,7 @@
 #include "Vehiculo.h"
 
 class Moto: public Vehiculo {
+    public:
     Moto(std::string placa);
 };  
 #endif
