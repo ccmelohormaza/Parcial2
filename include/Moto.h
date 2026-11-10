@@ -3,7 +3,16 @@
 #include "Vehiculo.h"
 
 class Moto: public Vehiculo {
+    private:
+        int cilindraje;
     public:
-    Moto(std::string placa);
+    Moto(std::string placa , int cilindraje);
+
+    // getters 
+    int getCilindraje();
+    // setters 
+    void setCilindraje(int cilindraje);
+
+    bool esAltoCilindraje();
 };  
 #endif

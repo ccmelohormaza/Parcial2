@@ -46,6 +46,15 @@ int main(){
         std::cerr << e.what() << std::endl;
     }
 
+    // prueba de escritorio para moto 
+    try {
+        Moto m1("XYZ-789", 200); 
+        std::cout << "Placa:" << m1.getPlaca() << std::endl;
+        std::cout << "Cilindraje: " << m1.getCilindraje()<< std::endl;
+        std::cout << "¿Es alto cilindraje?: " << m1.esAltoCilindraje()<< std::endl;
+    } catch ( std::exception& e) {
+        std::cerr << e.what() << std::endl;
+    }
     
     return 0;
 }
