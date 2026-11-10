@@ -10,5 +10,6 @@ std::string Vehiculo::getPlaca(){
     return placa;}
     
 // setters
-void Vehiculo::setPlaca(std::string placa){ this->placa=placa;
+void Vehiculo::setPlaca(std::string placa){ 
+    this->placa=placa;
 }
