@@ -3,8 +3,15 @@
 #include "Vehiculo.h"
 
 class Bus : public Vehiculo {
+private:
+    int puestos;
 public:
-    Bus(std::string placa);
+    Bus(std::string placa,int puestos);
+
+    // getter
+    int getPuestos();
+    // setterr
+    void setPuestos(int puestos);   
 };
 
 #endif
