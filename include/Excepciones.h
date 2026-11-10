@@ -7,11 +7,13 @@ class PlacaInvalidaException: public std::exception{
     private:
         std::string mensaje;
     public:
-        // constructor
+        //constructor
         PlacaInvalidaException(std::string mensaje );
-        
 
-} ;     
+        //esta linea la copie de internet porque no entiendo esto no mire en teoria. 
+        const char* what() const noexcept ; 
+} ;  
+
 // datos invalidos
 // descuadre  de caja 
 #endif 

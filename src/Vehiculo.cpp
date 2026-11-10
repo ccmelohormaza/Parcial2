@@ -1,15 +1,19 @@
 #include  "Vehiculo.h" 
+#include "Excepciones.h"
 
 // Constructor 
 Vehiculo::Vehiculo(std::string placa){
-    this-> placa=placa;
-}
-
+    if (placa.empty()) {
+        throw PlacaInvalidaException("Error: La placa del vehículo no puede estar vacía.");
+    }
+    this->placa = placa;}
 // getters 
 std::string Vehiculo::getPlaca(){
     return placa;}
-    
-// setters
+// setters 
 void Vehiculo::setPlaca(std::string placa){ 
-    this->placa=placa;
+    if (placa.empty()) {
+        throw PlacaInvalidaException("Error: La placa del vehículo no puede estar vacía.");
+    }
+    this->placa = placa;
 }
