@@ -7,26 +7,44 @@
 #include "Excepciones.h"
 
 int main(){
-    Vehiculo v1("Asd3321");
-    std::cout  << v1.getPlaca() << std::endl;
+   try {
+        Carro miCarro("ABC-123", 2);
+        std::cout << " Placa: " << miCarro.getPlaca() << std::endl;
+        std::cout << " Pasajeros iniciales: " << miCarro.getPasajeros() << std::endl;
 
-    try {
-        Carro carroValido("");
-        std::cout << "[OK] Carro creado con exito. Placa: " << carroValido.getPlaca() << "\n\n";
+        //Subimos un pasajero 
+        miCarro.subirPasajero();
+        std::cout << "Pasajeros tras subir uno:" << miCarro.getPasajeros() << std::endl;
     } 
-    catch ( PlacaInvalidaException & e) {
-        std::cerr  << e.what() << "\n\n";
+    catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
     }
 
+    try {
+        Carro miCarro("", 2);
+        std::cout << " Placa: " << miCarro.getPlaca() << std::endl;
+        std::cout << " Pasajeros iniciales: " << miCarro.getPasajeros() << std::endl;
 
+        //Subimos un pasajero 
+        miCarro.subirPasajero();
+        std::cout << "Pasajeros tras subir uno:" << miCarro.getPasajeros() << std::endl;
+    } 
+    catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+    }
 
-    //cosas que acordarme 
-    // cerr flujo de salida estandar de errores
+        try {
+        Carro miCarro("2313", 0);
+        std::cout << " Placa: " << miCarro.getPlaca() << std::endl;
+        std::cout << " Pasajeros iniciales: " << miCarro.getPasajeros() << std::endl;
 
-
-
-
-
+        //Subimos un pasajero 
+        miCarro.subirPasajero();
+        std::cout << "Pasajeros tras subir uno:" << miCarro.getPasajeros() << std::endl;
+    } 
+    catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+    }
 
     
     return 0;

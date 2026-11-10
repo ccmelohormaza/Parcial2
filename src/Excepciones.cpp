@@ -10,7 +10,6 @@ const char* PlacaInvalidaException::what() const noexcept {
 
 // dato invalidos
 
-
 DatosInvalidosException::DatosInvalidosException(std::string mensaje) {
     this->mensaje = mensaje;
 }   

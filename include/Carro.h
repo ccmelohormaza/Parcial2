@@ -5,8 +5,8 @@ class Carro : public Vehiculo {
     private:
         int pasajeros;
     public:
-        Carro(std::string placa);
-        int getPasajerso();
+        Carro(std::string placa, int pasajeros);
+        int getPasajeros();
         void setPasajeros(int pasajeros);
         void subirPasajero();
 };
