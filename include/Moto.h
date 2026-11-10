@@ -12,7 +12,8 @@ class Moto: public Vehiculo {
     int getCilindraje();
     // setters 
     void setCilindraje(int cilindraje);
-
+    // metodos generales y funciones 
     bool esAltoCilindraje();
+    double calcularPeaje() const override;
 };  
 #endif

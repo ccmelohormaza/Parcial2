@@ -22,3 +22,7 @@ void Carro::setPasajeros(int pasajeros) {
 void Carro::subirPasajero() {
     this->pasajeros++;
 }
+
+double Carro::calcularPeaje() const {
+    return 11800;
+}

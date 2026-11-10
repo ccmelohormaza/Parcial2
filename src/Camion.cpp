@@ -11,3 +11,7 @@ Camion::Camion(std::string placa, int ejes) : Vehiculo(placa) {
 void Camion::agregarEje() {
     this->ejes++;
 }   
+
+double Camion::calcularPeaje() const {
+    return this->ejes * 8400;
+}

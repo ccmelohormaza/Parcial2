@@ -25,8 +25,9 @@ Moto::Moto(std::string placa, int cilindraje ): Vehiculo(placa) {
         } else {
             return false;
         }
-
     }
-
+    double Moto::calcularPeaje() const {
+        return 3900;
+    }
 
 

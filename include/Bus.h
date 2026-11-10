@@ -11,7 +11,9 @@ public:
     // getter
     int getPuestos();
     // setterr
-    void setPuestos(int puestos);   
+    void setPuestos(int puestos);  
+    // metodos generales: 
+    double calcularPeaje() const override;
 };
 
 #endif

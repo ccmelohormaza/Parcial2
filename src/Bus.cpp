@@ -18,3 +18,8 @@ void Bus::setPuestos(int puestos) {
     }
     this->puestos = puestos;
 }
+
+// metodos generales y funciones
+double Bus::calcularPeaje() const {
+    return 15200;
+}

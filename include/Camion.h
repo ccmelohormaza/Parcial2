@@ -13,6 +13,7 @@ public:
     void setEjes(int ejes);
     // metodos generales:
     void agregarEje();
+    double calcularPeaje() const override;
 
 };
 #endif
