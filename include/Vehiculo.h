@@ -12,6 +12,8 @@ class Vehiculo {
         std::string getPlaca();
         // setters
         void  setPlaca(std::string placa);     
+        // el metodo virtual puro 
+        virtual double calcularPeaje() const = 0;
 };
 
 #endif
