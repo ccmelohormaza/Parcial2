@@ -16,3 +16,5 @@ void Bus::setPuestos(int puestos) {
     if (puestos < 1) {
         throw DatosInvalidosException("Error: Un bus debe tener al menos 1 puesto.");
     }
+    this->puestos = puestos;
+}
