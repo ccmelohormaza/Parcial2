@@ -13,7 +13,7 @@ std::string Vehiculo::getPlaca(){
 // setters 
 void Vehiculo::setPlaca(std::string placa){ 
     if (placa.empty()) {
-        throw PlacaInvalidaException("Error: La placa del vehículo no puede estar vacía.");
+        throw PlacaInvalidaException("Error:  La placa del vehiculo no puede estar vacia.");
     }
     this->placa = placa;
 }

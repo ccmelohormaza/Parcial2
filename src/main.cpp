@@ -4,21 +4,30 @@
 #include "Moto.h"
 #include "Bus.h"
 #include "Camion.h"
+#include "Excepciones.h"
 
 int main(){
     Vehiculo v1("Asd3321");
     std::cout  << v1.getPlaca() << std::endl;
 
-    Carro miCarro("ABC-123");
-    Moto miMoto("XYZ-789");
-    Bus miBus("BUS-456");
-    Camion miCamion("CAM-999");
+    try {
+        Carro carroValido("");
+        std::cout << "[OK] Carro creado con exito. Placa: " << carroValido.getPlaca() << "\n\n";
+    } 
+    catch ( PlacaInvalidaException & e) {
+        std::cerr  << e.what() << "\n\n";
+    }
 
 
-    std::cout << "Carro  - Placa: " << miCarro.getPlaca() << std::endl;
-    std::cout << "Moto   - Placa: " << miMoto.getPlaca() << std::endl;
-    std::cout << "Bus    - Placa: " << miBus.getPlaca() << std::endl;
-    std::cout << "Camion - Placa: " << miCamion.getPlaca() << std::endl;
+
+    //cosas que acordarme 
+    // cerr flujo de salida estandar de errores
+
+
+
+
+
+
     
     return 0;
 }
