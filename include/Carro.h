@@ -6,7 +6,7 @@ class Carro : public Vehiculo {
         int pasajeros;
     public:
         Carro(std::string placa, int pasajeros, Propietario* propietario=nullptr);
-        
+
         //getters 
         int getPasajeros();
         //setters
@@ -14,6 +14,7 @@ class Carro : public Vehiculo {
         //metodos y funciones 
         void subirPasajero();
         double calcularPeaje() const override;
+        std::string getCategoria() override;
 };
 
 #endif

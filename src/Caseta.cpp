@@ -17,6 +17,10 @@ Operador* Caseta::getOperador(){
     return this->operador;
 }
 
+std::vector <RegistroPaso> Caseta::getRegistros(){
+    return this->registros;
+}
+
 int Caseta::getCantidadCarros(){
     return this->cantidadCarros;
 }
@@ -47,6 +51,10 @@ void Caseta::setOperador(Operador* operador) {
     this->operador = operador;
 }
 
+void Caseta::setRegistros(std::vector<RegistroPaso> registros) {
+    this->registros = registros;
+}
+
 void Caseta::setCantidadCarros(int cantidad) {
     this->cantidadCarros = cantidad;
 }
@@ -69,4 +77,35 @@ void Caseta::setTotalPasos(int cantidadPasos) {
 
 void Caseta::setRecaudoTotal(double RecaudoTotal) {
     this->recuadoTotal = RecaudoTotal;
+}
+
+// metodos
+
+void Caseta::registrarPaso(Vehiculo* vehiculo){
+    if (vehiculo != nullptr){
+        //capturamos los valores
+        double valor=vehiculo->calcularPeaje();
+        std::string categoria=vehiculo->getCategoria();
+        std::string placa=vehiculo->getPlaca();
+
+        RegistroPaso nuevoRegistro(placa,categoria,valor);
+        this->registros.push_back(nuevoRegistro);
+
+        //actualizamos contadores
+        this->totalPasos++;
+        this->recuadoTotal +=valor;
+
+        if (categoria=="Carro"){
+            this->cantidadCarros++;
+        }
+        else if (categoria=="Moto"){
+            this->cantidadMotos++;
+        }
+        else if (categoria=="Bus"){
+            this->cantidadBuses++;
+        }
+        else if (categoria=="Camion"){
+            this->cantidadCamiones++;
+        }
+    }
 }

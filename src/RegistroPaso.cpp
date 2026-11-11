@@ -33,7 +33,8 @@ void RegistroPaso::setValorCobrado(double valorCobrado) {
     this->valorCobrado = valorCobrado;
 }
 
-// Método mostrar con separador -
+// Método mostrar 
 void RegistroPaso::mostrar() {
     std::cout << this->placa << " | " << this->categoria << "| $" << this->valorCobrado << std::endl;
 }
+

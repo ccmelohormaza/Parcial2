@@ -15,3 +15,7 @@ void Camion::agregarEje() {
 double Camion::calcularPeaje() const {
     return this->ejes * 8400;
 }
+
+std::string Camion::getCategoria() {
+    return "Camion";
+}

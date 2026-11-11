@@ -31,3 +31,7 @@ double Carro::calcularPeaje() const {
     }
     return tarifaBase;
 }
+
+std::string Carro::getCategoria() {
+    return "Carro";
+}

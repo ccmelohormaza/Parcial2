@@ -1,11 +1,14 @@
 #ifndef CASETA_H
 #define CASETA_H
 #include "Operador.h"
+#include <vector>
+#include "RegistroPaso.h"
+#include "Vehiculo.h"
 
 class Caseta {
 private:
     Operador* operador;
-    // registro de placa, categoria, valor cobrado 
+    std::vector <RegistroPaso> registros;
     int cantidadCarros;
     int cantidadMotos;
     int cantidadBuses;
@@ -13,9 +16,12 @@ private:
     int totalPasos;
     double recuadoTotal;
 public:
-    //getters 
+    //constructor 
     Caseta(Operador* operador);
+
+    //getters
     Operador* getOperador();
+    std::vector<RegistroPaso>getRegistros();
     int getCantidadCarros();
     int getCantidadMotos();
     int getCantidadBuses();
@@ -25,12 +31,17 @@ public:
     
     // setter
     void setOperador(Operador* operador);
+    void setRegistros(std::vector<RegistroPaso> registros);
     void setCantidadCarros(int cantidad);
     void setCantidadMotos(int cantidad);
     void setCantidadBuses(int cantidad);
     void setCantidadCamiones(int cantidad);
     void setTotalPasos(int cantidadPasos);
     void setRecaudoTotal(double RecaudoTotal);
+
+    // metodos generales
+    void registrarPaso(Vehiculo*vehiculo);
+    void mostrarRegistro();
 };
 
 #endif

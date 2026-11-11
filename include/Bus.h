@@ -14,6 +14,7 @@ public:
     void setPuestos(int puestos);  
     // metodos generales: 
     double calcularPeaje() const override;
+    std::string getCategoria() override;
 };
 
 #endif

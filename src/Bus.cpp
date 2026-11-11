@@ -24,3 +24,6 @@ double Bus::calcularPeaje() const {
     double tarifaBase = 15200;
     return tarifaBase;
 }
+
+std::string Bus::getCategoria() {
+    return "Bus";}

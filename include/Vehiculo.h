@@ -22,6 +22,7 @@ class Vehiculo {
 
         // metodo virtual puro
         virtual double calcularPeaje() const = 0;
+        virtual std::string getCategoria()=0;
 };
 
 #endif

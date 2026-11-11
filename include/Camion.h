@@ -14,6 +14,8 @@ public:
     // metodos generales:
     void agregarEje();
     double calcularPeaje() const override;
+    std::string getCategoria() override;
+    
 
 };
 #endif

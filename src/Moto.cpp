@@ -35,4 +35,7 @@ Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo
             return tarifaBase;
     }
 
+    std::string Moto::getCategoria() {
+    return "Moto"; }
+
 
