@@ -6,6 +6,7 @@
 #include "Propietario.h"
 #include <iostream>
 
+
 class Propietario;
 class Vehiculo {
     protected:
