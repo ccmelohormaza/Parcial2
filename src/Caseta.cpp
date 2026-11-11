@@ -13,12 +13,19 @@ Caseta::Caseta(Operador* operador){
     this->recuadoTotal=0.0;
 }
 
+Caseta::~Caseta(){
+    for (RegistroPaso*r: this->registros){
+        delete r;
+    }
+    this->registros.clear();
+}
+
 // Getters 
 Operador* Caseta::getOperador(){
     return this->operador;
 }
 
-std::vector <RegistroPaso> Caseta::getRegistros(){
+std::vector <RegistroPaso*> Caseta::getRegistros(){
     return this->registros;
 }
 
@@ -52,7 +59,7 @@ void Caseta::setOperador(Operador* operador) {
     this->operador = operador;
 }
 
-void Caseta::setRegistros(std::vector<RegistroPaso> registros) {
+void Caseta::setRegistros(std::vector<RegistroPaso*> registros) {
     this->registros = registros;
 }
 
@@ -89,7 +96,7 @@ void Caseta::registrarPaso(Vehiculo* vehiculo){
         std::string categoria=vehiculo->getCategoria();
         std::string placa=vehiculo->getPlaca();
 
-        RegistroPaso nuevoRegistro(placa,categoria,valor);
+        RegistroPaso* nuevoRegistro =new RegistroPaso(placa,categoria,valor);
         this->registros.push_back(nuevoRegistro);
 
         //actualizamos contadores
@@ -113,8 +120,8 @@ void Caseta::registrarPaso(Vehiculo* vehiculo){
 
 void Caseta::mostrarRegistro(){
     std::cout<<"____HISTORIA DE REGISTROS DE PASO___ "<<std::endl;
-    for(RegistroPaso r: this->registros){
-        r.mostrar();
+    for(RegistroPaso* r: this->registros){
+        r->mostrar();
     }
     
 }

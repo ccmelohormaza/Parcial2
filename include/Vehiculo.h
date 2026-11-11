@@ -1,8 +1,10 @@
 #ifndef VEHICULO_H
 #define VEHICULO_H
 
+
 #include <string>
 #include "Propietario.h"
+#include <iostream>
 
 class Propietario;
 class Vehiculo {
