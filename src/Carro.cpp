@@ -1,4 +1,5 @@
 #include "Carro.h"
+#include "Propietario.h"
 #include "Excepciones.h"
 
 Carro::Carro(std::string placa , int pasajeros,Propietario*propietario): Vehiculo(placa,propietario) {

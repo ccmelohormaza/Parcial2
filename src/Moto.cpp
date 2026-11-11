@@ -1,4 +1,5 @@
 #include "Moto.h"
+#include "Propietario.h"
 #include "Excepciones.h" 
 
 Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo(placa,propietario) {

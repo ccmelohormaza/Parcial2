@@ -22,8 +22,5 @@ void Bus::setPuestos(int puestos) {
 // metodos generales y funciones
 double Bus::calcularPeaje() const {
     double tarifaBase = 15200;
-    if (propietario != nullptr && propietario->getVecino()) {
-        return tarifaBase * (100 - 35) / 100;;
-    }
     return tarifaBase;
 }
