@@ -10,5 +10,7 @@ public:
     bool getVecino();
     //setters
     void setVecino(bool Vecino);
+    // sobreEscritura de metodos virtuales
+    std::string describir() const override;
 };
 #endif

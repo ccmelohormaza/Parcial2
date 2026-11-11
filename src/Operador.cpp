@@ -11,3 +11,7 @@ std::string Operador::getCodigo() {
 void Operador::setCodigo(std::string codigo) {
     this->codigo = codigo;
 }   
+
+std::string Operador::describir() const {
+    return "Operador: " + nombre + " | Doc: " + documento + " | Codigo: " + codigo;
+}

@@ -11,6 +11,7 @@ public:
     std::string getCodigo();
     //setters
     void setCodigo(std::string codigo);
-    
+    // sobreEscritura de metodos virtuales
+    std::string describir() const override;
 };
 #endif
