@@ -18,5 +18,8 @@ class RegistroPaso{
         void setPlaca(std::string placa);
         void setCategoria(std::string categoria);
         void setValorCobrado(double valorCobrado);
+
+        // Método mostrar
+        void mostrar();
 };
 #endif
