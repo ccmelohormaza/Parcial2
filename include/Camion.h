@@ -5,8 +5,10 @@ class Camion : public Vehiculo {
 private:
     int ejes;
 public:
+    //constructor
     Camion(std::string placa,int ejes,Propietario* propietario=nullptr);
-
+    //destructor
+    ~Camion() override;
     //getters
     int getEjes();
     //setters

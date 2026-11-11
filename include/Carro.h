@@ -5,8 +5,10 @@ class Carro : public Vehiculo {
     private:
         int pasajeros;
     public:
+        //constructor 
         Carro(std::string placa, int pasajeros, Propietario* propietario=nullptr);
-
+        // destructor
+        ~Carro() override;
         //getters 
         int getPasajeros();
         //setters

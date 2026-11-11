@@ -1,13 +1,18 @@
 #include "Carro.h"
 #include "Propietario.h"
 #include "Excepciones.h"
+#include <iostream>
 
 Carro::Carro(std::string placa , int pasajeros,Propietario*propietario): Vehiculo(placa,propietario) {
     if (pasajeros<1){
         throw DatosInvalidosException("Error: El numero de pasajeros no puede ser menor a 1.");
     }
     this->pasajeros=pasajeros;
-}   
+}  
+ 
+Carro::~Carro() {
+    std::cout << "Destruyendo Carro " << this->placa << std::endl;
+}
 
 int Carro::getPasajeros(){
     return this->pasajeros;

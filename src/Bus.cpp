@@ -1,12 +1,19 @@
 #include "Bus.h"
 #include "Excepciones.h"
+#include <iostream>
 
+//constructor
 Bus::Bus(std::string placa, int puestos,Propietario* propietario ) : Vehiculo(placa,propietario) {
     if (puestos < 1) {
         throw DatosInvalidosException("Error: Un bus debe tener al menos 1 puesto.");
     }
     this->puestos = puestos;
 }
+// destructor
+Bus::~Bus() {
+    std::cout << "Destruyendo Bus " << this->placa << std::endl;
+}
+
 // getters 
 int Bus::getPuestos() {
     return this->puestos;

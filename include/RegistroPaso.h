@@ -9,6 +9,8 @@ class RegistroPaso{
     public:
         RegistroPaso(std::string placa , std::string categoria,  double valorCobrado);
 
+        ~RegistroPaso();
+
         //Getters
         std::string getPlaca();
         std::string getCategoria();
@@ -19,7 +21,6 @@ class RegistroPaso{
         void setCategoria(std::string categoria);
         void setValorCobrado(double valorCobrado);
 
-        // Método mostrar
-        void mostrar();
+
 };
 #endif

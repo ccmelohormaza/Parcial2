@@ -2,11 +2,15 @@
 #define MOTO_H
 #include "Vehiculo.h"
 
+
 class Moto: public Vehiculo {
     private:
         int cilindraje;
     public:
+        //constructor 
         Moto(std::string placa , int cilindraje, Propietario* propietario=nullptr);
+        //destructor
+        ~Moto() override;
         // getters 
         int getCilindraje();
         // setters 

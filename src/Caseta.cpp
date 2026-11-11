@@ -12,8 +12,9 @@ Caseta::Caseta(Operador* operador){
     this->totalPasos=0;
     this->recuadoTotal=0.0;
 }
-
+// destructor
 Caseta::~Caseta(){
+    std::cout << "Destruyendo Caseta" << std::endl;
     for (RegistroPaso*r: this->registros){
         delete r;
     }
@@ -118,10 +119,4 @@ void Caseta::registrarPaso(Vehiculo* vehiculo){
     }
 }
 
-void Caseta::mostrarRegistro(){
-    std::cout<<"____HISTORIA DE REGISTROS DE PASO___ "<<std::endl;
-    for(RegistroPaso* r: this->registros){
-        r->mostrar();
-    }
-    
-}
+

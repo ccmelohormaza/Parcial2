@@ -8,6 +8,11 @@ RegistroPaso::RegistroPaso(std::string placa, std::string categoria, double valo
     this->valorCobrado = valorCobrado;
 }
 
+//Destructor
+RegistroPaso::~RegistroPaso() {
+    std::cout << "Destruyendo RegistroPaso " << this->placa << std::endl;
+}
+
 // Getters
 std::string RegistroPaso::getPlaca() {
     return this->placa;
@@ -33,8 +38,6 @@ void RegistroPaso::setValorCobrado(double valorCobrado) {
     this->valorCobrado = valorCobrado;
 }
 
-// Método mostrar 
-void RegistroPaso::mostrar() {
-    std::cout << this->placa << " | " << this->categoria << "| $" << this->valorCobrado << std::endl;
-}
+
+
 

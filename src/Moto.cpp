@@ -1,7 +1,9 @@
 #include "Moto.h"
 #include "Propietario.h"
 #include "Excepciones.h" 
+#include <iostream>
 
+// constructor 
 Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo(placa,propietario) {
   
     if (cilindraje <= 0) {
@@ -9,37 +11,43 @@ Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo
     }
     this->cilindraje = cilindraje;
 }
-    // getters 
-    int Moto::getCilindraje(){
-        return this->cilindraje;    
+
+//destructor
+Moto::~Moto() {
+    std::cout << "Destruyendo Moto " << this->placa << std::endl;
+}
+
+// getters 
+int Moto::getCilindraje(){
+    return this->cilindraje;    
+}
+// setters 
+void Moto::setCilindraje(int cilindraje){
+    if (cilindraje <= 0) {
+    throw DatosInvalidosException("Error: El cilindraje debe ser mayor que cero.");
+}
+    this->cilindraje = cilindraje;
+}
+bool Moto::esAltoCilindraje(){
+    if ( this->cilindraje > 400 ){
+        return true;
+    } else {
+        return false;
     }
-    // setters 
-    void Moto::setCilindraje(int cilindraje){
-        if (cilindraje <= 0) {
-        throw DatosInvalidosException("Error: El cilindraje debe ser mayor que cero.");
-    }
-        this->cilindraje = cilindraje;
-    }
-    bool Moto::esAltoCilindraje(){
-        if ( this->cilindraje > 400 ){
-            return true;
-        } else {
-            return false;
+}
+double Moto::calcularPeaje() const {
+        double tarifaBase = 3900.0;
+        if (propietario != nullptr && propietario->getVecino()) {
+            return tarifaBase * (100 - 35) / 100;
         }
-    }
-    double Moto::calcularPeaje() const {
-            double tarifaBase = 3900.0;
-            if (propietario != nullptr && propietario->getVecino()) {
-                return tarifaBase * (100 - 35) / 100;
-            }
-            return tarifaBase;
-    }
+        return tarifaBase;
+}
 
-    std::string Moto::getCategoria() {
-    return "Moto"; }
+std::string Moto::getCategoria() {
+return "Moto"; }
 
-    std::string Moto::describir() {
-    return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Cilindraje: " + std::to_string(this->cilindraje) + " cc";
+std::string Moto::describir() {
+return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Cilindraje: " + std::to_string(this->cilindraje) + " cc";
 }
 
 

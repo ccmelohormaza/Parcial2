@@ -2,12 +2,15 @@
 #define BUS_H
 #include "Vehiculo.h"
 
+
 class Bus : public Vehiculo {
 private:
     int puestos;
 public:
+    //constructor
     Bus(std::string placa,int puestos, Propietario* propietario=nullptr);
-
+    // destructor
+    ~Bus() override;
     // getter
     int getPuestos();
     // setterr

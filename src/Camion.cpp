@@ -1,7 +1,25 @@
 #include "Camion.h"
 #include "Excepciones.h"
+#include <iostream>
 
+// constructor
 Camion::Camion(std::string placa, int ejes,Propietario*propietario) : Vehiculo(placa,propietario) {
+    if (ejes < 2) {
+        throw DatosInvalidosException("Error: Un camion debe tener al menos 2 ejes.");
+    }
+    this->ejes = ejes;
+}
+
+// destructor
+Camion::~Camion() {
+    std::cout << "Destruyendo Camion " << this->placa << std::endl;}
+
+
+int Camion::getEjes() {
+    return this->ejes;
+}
+
+void Camion::setEjes(int ejes) {
     if (ejes < 2) {
         throw DatosInvalidosException("Error: Un camion debe tener al menos 2 ejes.");
     }

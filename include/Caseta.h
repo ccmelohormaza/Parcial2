@@ -41,7 +41,6 @@ public:
 
     // metodos generales
     void registrarPaso(Vehiculo*vehiculo);
-    void mostrarRegistro();
 };
 
 #endif
