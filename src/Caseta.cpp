@@ -1,4 +1,5 @@
 #include "Caseta.h"
+#include <iostream>
 
 // constructor 
 
@@ -108,4 +109,12 @@ void Caseta::registrarPaso(Vehiculo* vehiculo){
             this->cantidadCamiones++;
         }
     }
+}
+
+void Caseta::mostrarRegistro(){
+    std::cout<<"____HISTORIA DE REGISTROS DE PASO___ "<<std::endl;
+    for(RegistroPaso r: this->registros){
+        r.mostrar();
+    }
+    
 }
