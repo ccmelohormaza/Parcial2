@@ -32,6 +32,3 @@ std::string Bus::describir() {
     return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Puestos: " + std::to_string(this->puestos);
 }
 
-std::string Bus::describir() {
-    return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Puestos: " + std::to_string(this->puestos);
-}
