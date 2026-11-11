@@ -27,7 +27,11 @@ Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo
         }
     }
     double Moto::calcularPeaje() const {
-        return 3900;
+            double tarifaBase = 3900.0;
+            if (propietario != nullptr && propietario->getVecino()) {
+                return tarifaBase * 0.80;
+            }
+            return tarifaBase;
     }
 
 

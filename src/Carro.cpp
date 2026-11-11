@@ -24,5 +24,9 @@ void Carro::subirPasajero() {
 }
 
 double Carro::calcularPeaje() const {
-    return 11800;
+    double tarifaBase = 11800.0;
+    if (propietario != nullptr && propietario->getVecino()) {
+        return tarifaBase * 0.80;
+    }
+    return tarifaBase;
 }
