@@ -27,3 +27,8 @@ void Vehiculo::setPlaca(std::string placa){
 void Vehiculo::setPropietario(Propietario* propietario) {
     this->propietario = propietario;
 }
+
+std::ostream& operator<<(std::ostream& os, Vehiculo& v) {
+    os << v.describir();
+    return os;
+}

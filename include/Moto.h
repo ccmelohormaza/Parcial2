@@ -15,5 +15,6 @@ class Moto: public Vehiculo {
         bool esAltoCilindraje();
         double calcularPeaje() const override;
         std::string getCategoria() override;
+        std::string describir() override;
 };  
 #endif

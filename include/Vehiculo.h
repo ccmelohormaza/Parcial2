@@ -23,6 +23,9 @@ class Vehiculo {
         // metodo virtual puro
         virtual double calcularPeaje() const = 0;
         virtual std::string getCategoria()=0;
+        virtual std::string describir() = 0;
 };
 
+// aqui realizo una sobrecarga de operador --tema no enseñado en teoria 
+std::ostream& operator<<(std::ostream& os, Vehiculo& v);
 #endif

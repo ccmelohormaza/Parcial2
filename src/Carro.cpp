@@ -35,3 +35,7 @@ double Carro::calcularPeaje() const {
 std::string Carro::getCategoria() {
     return "Carro";
 }
+
+std::string Carro::describir() {
+    return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Pasajeros: " + std::to_string(this->pasajeros);
+}

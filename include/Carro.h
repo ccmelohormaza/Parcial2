@@ -15,6 +15,7 @@ class Carro : public Vehiculo {
         void subirPasajero();
         double calcularPeaje() const override;
         std::string getCategoria() override;
+        std::string describir() override;
 };
 
 #endif

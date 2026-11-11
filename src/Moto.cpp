@@ -38,4 +38,8 @@ Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo
     std::string Moto::getCategoria() {
     return "Moto"; }
 
+    std::string Moto::describir() {
+    return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Cilindraje: " + std::to_string(this->cilindraje) + " cc";
+}
+
 

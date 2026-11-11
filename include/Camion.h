@@ -15,7 +15,7 @@ public:
     void agregarEje();
     double calcularPeaje() const override;
     std::string getCategoria() override;
-    
+    std::string describir() override;
 
 };
 #endif

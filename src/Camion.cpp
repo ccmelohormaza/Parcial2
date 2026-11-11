@@ -19,3 +19,7 @@ double Camion::calcularPeaje() const {
 std::string Camion::getCategoria() {
     return "Camion";
 }
+
+std::string Camion::describir() {
+    return "Categoria: " + getCategoria() + ", Placa: " + this->placa + ", Ejes: " + std::to_string(this->ejes);
+}
