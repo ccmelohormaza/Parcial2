@@ -1,7 +1,7 @@
 #include "Carro.h"
 #include "Excepciones.h"
 
-Carro::Carro(std::string placa , int pasajeros): Vehiculo(placa) {
+Carro::Carro(std::string placa , int pasajeros,Propietario*propietario): Vehiculo(placa,propietario) {
     if (pasajeros<1){
         throw DatosInvalidosException("Error: El numero de pasajeros no puede ser menor a 1.");
     }

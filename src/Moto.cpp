@@ -1,7 +1,7 @@
 #include "Moto.h"
 #include "Excepciones.h" 
 
-Moto::Moto(std::string placa, int cilindraje ): Vehiculo(placa) {
+Moto::Moto(std::string placa, int cilindraje,Propietario* propietario): Vehiculo(placa,propietario) {
   
     if (cilindraje <= 0) {
         throw DatosInvalidosException("Error: El cilindraje debe ser mayor que cero.");

@@ -5,7 +5,7 @@ class Camion : public Vehiculo {
 private:
     int ejes;
 public:
-    Camion(std::string placa,int ejes);
+    Camion(std::string placa,int ejes,Propietario* propietario=nullptr);
 
     //getters
     int getEjes();

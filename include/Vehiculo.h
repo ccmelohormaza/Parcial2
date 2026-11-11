@@ -1,5 +1,6 @@
 #ifndef VEHICULO_H
 #define VEHICULO_H
+
 #include <string>
 #include "Propietario.h"
 
@@ -10,7 +11,7 @@ class Vehiculo {
         Propietario* propietario;
     public:
         // constructor
-        Vehiculo(std::string placa, Propietario* propietario);
+        Vehiculo(std::string placa, Propietario* propietario=nullptr);
         virtual ~Vehiculo()=default;  
         // getters 
         std::string getPlaca();

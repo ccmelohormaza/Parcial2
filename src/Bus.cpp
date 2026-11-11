@@ -1,7 +1,7 @@
 #include "Bus.h"
 #include "Excepciones.h"
 
-Bus::Bus(std::string placa, int puestos ) : Vehiculo(placa) {
+Bus::Bus(std::string placa, int puestos,Propietario* propietario ) : Vehiculo(placa,propietario) {
     if (puestos < 1) {
         throw DatosInvalidosException("Error: Un bus debe tener al menos 1 puesto.");
     }

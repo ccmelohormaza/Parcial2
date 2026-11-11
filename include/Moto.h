@@ -6,7 +6,7 @@ class Moto: public Vehiculo {
     private:
         int cilindraje;
     public:
-        Moto(std::string placa , int cilindraje);
+        Moto(std::string placa , int cilindraje, Propietario* propietario=nullptr);
         // getters 
         int getCilindraje();
         // setters 

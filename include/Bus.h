@@ -6,7 +6,7 @@ class Bus : public Vehiculo {
 private:
     int puestos;
 public:
-    Bus(std::string placa,int puestos);
+    Bus(std::string placa,int puestos, Propietario* propietario=nullptr);
 
     // getter
     int getPuestos();

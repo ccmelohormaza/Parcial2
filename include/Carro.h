@@ -5,7 +5,8 @@ class Carro : public Vehiculo {
     private:
         int pasajeros;
     public:
-        Carro(std::string placa, int pasajeros);
+        Carro(std::string placa, int pasajeros, Propietario* propietario=nullptr);
+        
         //getters 
         int getPasajeros();
         //setters
