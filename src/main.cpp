@@ -52,15 +52,14 @@ int main() {
         imprimirMenu();
         std::cin>>opcion;
         std::cout<<std::endl;
-        switch (opcion)
-        {
-            case 1:{
-                try {
+        try{
+            switch (opcion)
+            {
+                case 1:{
                     std::cout<<"\n---------------ejecutando caso 1----------------"<<std::endl;
-
                     if (noVecino==nullptr){
-                       noVecino=new Propietario("Carlitos","1010019128",false);
-                       personas.push_back(noVecino) ;
+                        noVecino=new Propietario("Carlitos","1010019128",false);
+                        personas.push_back(noVecino) ;
                     }
 
                     if (carroUno ==nullptr){
@@ -70,33 +69,35 @@ int main() {
                     else{
                         carroUno->setPropietario(noVecino);
                     }
-                        
+                            
                     // calculamos cuanto psga y imprimimos en la misma funcion
                     std::cout<<"\nCaso 1: "<<*carroUno<< " Paga $"<< carroUno->calcularPeaje()<< std::endl;
                     std::cout<<"\n---------------Fin caso 1 ------------------------"<<std::endl;
-
+                    break;
                 }
-                catch (const std::exception& e){
-                    std::cout << "Caso 1: Error -> " << e.what() << std::endl;
+                case 2:{break;}
+                case 3:{break;}
+                case 4:{break;}
+                case 5:{break;}
+                case 6:{break;}
+                case 7:{break;}
+                case 8:{break;}
+                case 9:{break;}
+                case 10:{break;}
+                case 11:{break;}
+                case 12:{break;}
+                case 13:{break;}
+                case 0:{break;}
+                default:{
+                    std::cout<<"la opcion seleccionada no existe "<<std::endl;
+                    break;
                 }
-                break;}
-            case 2:{break;}
-            case 3:{break;}
-            case 4:{break;}
-            case 5:{break;}
-            case 6:{break;}
-            case 7:{break;}
-            case 8:{break;}
-            case 9:{break;}
-            case 10:{break;}
-            case 11:{break;}
-            case 12:{break;}
-            case 13:{break;}
-            case 0:{break;}
-            default:{std::cout<<"la opcion seleccionada no existe "<<std::endl;
-                break;
             }
         }
+        catch (const std::exception& e){
+            std::cout <<"Caso "<< opcion<< ":Error->"<< e.what()<<std::endl;
+        }
+
         if (opcion!=0){
             std::cout<<"\n presiona enter para continuar";
             std::cin.ignore(1000,'\n');
@@ -104,7 +105,10 @@ int main() {
         }
         
 
-    } while (opcion!=0);
+    } 
+    while (opcion!=0);
+    
+    // libero la memoria 
     
     for (Vehiculo* v : vehiculos) {
         delete v;
