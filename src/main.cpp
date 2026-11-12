@@ -187,10 +187,7 @@ int main() {
     std::cout<<"\n____________________________________________________________________________________\n";
     std::cout<<"caso10: Pasan por la caseta los vehiculos de los casos 2, 3, 5 y 7. Cual es el recaudo total  y cuantos hay de cada categoria?" <<std::endl;
     try{
-        //primero voy a revisar en que posicion estan los vehiculosd esa catergoria
-        for (size_t i = 0; i < vehiculos.size(); i++) {
-            std::cout << "Posicion [" << i << "]: " << *vehiculos[i]<<std::endl;
-        }
+ 
         //creo el operador que controla la caseta 
         Operador*operador=new Operador("Daniel","1015219165","1");
         personas.push_back(operador);
