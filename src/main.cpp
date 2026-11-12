@@ -213,9 +213,32 @@ int main() {
     std::cout<<"____________________________________________________________________________________"<<std::endl;
 
 
+    // caso 11
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"caso11: El operador declara exactamente el recaudo del caso 10. Que ocurre?" <<std::endl;
+    std::cout<<"R7 fue omitido en el trabajo ";
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
 
 
+    // caso 12
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"caso12: El operador declara 1000 menos que el recaudo del caso 10. Que ocurre?" <<std::endl;
+    std::cout<<"R7 fue omitido en el trabajo ";
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
 
+        // caso 12
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"caso12: El operador declara 1000 menos que el recaudo del caso 10. Que ocurre?" <<std::endl;
+    std::cout<<"R7 fue omitido en el trabajo ";
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+    
 
 
 
