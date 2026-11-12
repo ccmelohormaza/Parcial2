@@ -106,7 +106,26 @@ int main() {
         std::cout << "\nPresione Enter para continuar...";
         std::getline(std::cin, pausa);  
         std::cout<<"____________________________________________________________________________________"<<std::endl;
+    
+    // caso 5 
+        std::cout<<"\n____________________________________________________________________________________\n";
+        std::cout<<"Caso5: Bus BUS777 de 38 puestos, propietario vecino. Cuanto paga?"<<std::endl;
+        try{
+            Propietario *propietarioCinco =new Propietario("Fernando","1016019137",true);
+            personas.push_back(propietarioCinco);
 
+            Bus*busCinco=new Bus("BUS777",38,propietarioCinco);
+            vehiculos.push_back(busCinco);
+
+            std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
+
+        }
+        catch (const std::exception& e) {
+            std::cout << "Error en Caso 5: " << e.what() << std::endl;
+        }
+        std::cout << "\nPresione Enter para continuar...";
+        std::getline(std::cin, pausa);  
+        std::cout<<"____________________________________________________________________________________"<<std::endl;
 
     
     // limpiamos todo 
