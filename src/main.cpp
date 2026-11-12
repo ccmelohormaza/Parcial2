@@ -38,8 +38,8 @@ void imprimirMenu(){
 int main() {
 
     // CREAMOS LOS VECTORES QUE MENCIONA EL C3
-    std::vector <Vehiculo*> personas;
-    std::vector <Persona*> vehiculos;
+    std::vector <Vehiculo*> vehiculos;
+    std::vector <Persona*> personas ;
 
     int opcion=-1;
     do {
@@ -49,7 +49,22 @@ int main() {
         switch (opcion)
         {
             case 1:{
-            
+                try {
+                    // creamos el propietario que no es vecino 
+                    Propietario*noVecino=new Propietario ("Carlitos","10100199258",false);
+                    personas.push_back(noVecino);
+                    
+                    // creamos el carro uno 
+                    Vehiculo* carroUno =new Carro ("ABC123",3,noVecino);
+                    vehiculos.push_back(carroUno);
+
+                    // calculamos cuanto psga y imprimimos en la misma funcion
+                    std::cout<< "Caso 1: "<<*carroUno<< " Paga $"<< carroUno->calcularPeaje()<< std::endl;
+
+                }
+                catch (const std::exception& e){
+                    std::cout << "Caso 1: Error -> " << e.what() << std::endl;
+                }
                 
                 
                 break;}
