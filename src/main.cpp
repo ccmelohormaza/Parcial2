@@ -76,7 +76,7 @@ int main() {
 
         std::cout  <<"Respuesta:" << std::endl;
         std::cout  << *vehiculos[1] << " | Paga $" << vehiculos[1]->calcularPeaje() << std::endl;
-        std::cout  << *vehiculos[1] << " | Paga $" << motoUno->calcularPeaje() << std::endl;
+    
         
     }
     catch (const std::exception& e) {
