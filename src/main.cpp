@@ -48,9 +48,10 @@ int main() {
     std::cout<<"\n____________________________________________________________________________________\n";
     std::cout<<"Caso2: El mismo carro, ahora con un propietario vecino. Cuanto paga?"<<std::endl;
     try{
-        Propietario *propietarioUno=new Propietario ("Maria","2210019125",true);
-        personas.push_back(propietarioUno);
-        vehiculos[0]->setPropietario(propietarioUno);
+        Propietario *propietarioDos=new Propietario ("Maria","2210019125",true);
+        personas.push_back(propietarioDos);
+        vehiculos[0]->setPropietario(propietarioDos);
+
         std::cout  <<"Respuesta:" << std::endl;
         std::cout  << *vehiculos[0] << " | Paga $" << vehiculos[0]->calcularPeaje() << std::endl;
     }
@@ -62,6 +63,28 @@ int main() {
     std::getline(std::cin, pausa);  
     std::cout<<"____________________________________________________________________________________"<<std::endl;
 
+    // caso 3 
+    std::cout<<"\n____________________________________________________________________________________\n";
+    
+    std::cout<<"Moto XYZ45A de 125 cc, propietario vecino. Cuanto paga?"<<std::endl;
+    try{
+        Propietario *propietarioTres =new Propietario("Juan","1016019137",true);
+        personas.push_back(propietarioTres);
+
+        Moto* motoUno= new Moto("XYZ45A",125,propietarioTres);
+        vehiculos.push_back(motoUno);
+
+        std::cout  <<"Respuesta:" << std::endl;
+        std::cout  << *vehiculos[1] << " | Paga $" << vehiculos[1]->calcularPeaje() << std::endl;
+        std::cout  << *vehiculos[1] << " | Paga $" << motoUno->calcularPeaje() << std::endl;
+        
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 3: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
 
 
     
