@@ -66,7 +66,7 @@ int main() {
     // caso 3 
     std::cout<<"\n____________________________________________________________________________________\n";
     
-    std::cout<<"Moto XYZ45A de 125 cc, propietario vecino. Cuanto paga?"<<std::endl;
+    std::cout<<"Caso3: Moto XYZ45A de 125 cc, propietario vecino. Cuanto paga?"<<std::endl;
     try{
         Propietario *propietarioTres =new Propietario("Juan","1016019137",true);
         personas.push_back(propietarioTres);
@@ -141,6 +141,37 @@ int main() {
     std::cout << "\nPresione Enter para continuar...";
     std::getline(std::cin, pausa);  
     std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+    // caso 7
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"Caso7: El mismo camion despues de agregarle un eje. Cuanto paga?"<<std::endl;
+    try{
+        //volvemos a convertir en camion 
+        ((Camion*)vehiculos.back())->agregarEje();
+        std::cout<<*vehiculos.back()<< " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl; 
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 7: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+    // caso 8
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"Caso7: El mismo camion despues de agregarle un eje. Cuanto paga?"<<std::endl;
+    try{
+        //volvemos a convertir en camion 
+        ((Camion*)vehiculos.back())->agregarEje();
+        std::cout<<*vehiculos.back()<< " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl; 
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 7: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
 
 
     
