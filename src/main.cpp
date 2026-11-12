@@ -90,42 +90,58 @@ int main() {
     //caso 4 
 
     std::cout<<"\n____________________________________________________________________________________\n";
-        std::cout<<"Caso4: Moto MOT650 de 650 cc, sin propietario. Cuanto paga? Es de alto cilindraje?"<<std::endl;
-        try{
-            Moto *motoCasoCuatro=new Moto("MOT650",650);
-            vehiculos.push_back(motoCasoCuatro);
-            std::cout  <<"Respuesta:" << std::endl;
-        
-            std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
-            std::cout << "Alto cilindraje: " << (((Moto*)vehiculos[2])->esAltoCilindraje() ? "Si" : "No")<< std::endl;
-        }
+    std::cout<<"Caso4: Moto MOT650 de 650 cc, sin propietario. Cuanto paga? Es de alto cilindraje?"<<std::endl;
+    try{
+        Moto *motoCasoCuatro=new Moto("MOT650",650);
+        vehiculos.push_back(motoCasoCuatro);
+        std::cout  <<"Respuesta:" << std::endl;
+    
+        std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
+        std::cout << "Alto cilindraje: " << (((Moto*)vehiculos[2])->esAltoCilindraje() ? "Si" : "No")<< std::endl;
+    }
 
-        catch (const std::exception& e) {
-            std::cout << "Error en Caso 4: " << e.what() << std::endl;
-        }
-        std::cout << "\nPresione Enter para continuar...";
-        std::getline(std::cin, pausa);  
-        std::cout<<"____________________________________________________________________________________"<<std::endl;
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 4: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
     
     // caso 5 
-        std::cout<<"\n____________________________________________________________________________________\n";
-        std::cout<<"Caso5: Bus BUS777 de 38 puestos, propietario vecino. Cuanto paga?"<<std::endl;
-        try{
-            Propietario *propietarioCinco =new Propietario("Fernando","1016019137",true);
-            personas.push_back(propietarioCinco);
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"Caso5: Bus BUS777 de 38 puestos, propietario vecino. Cuanto paga?"<<std::endl;
+    try{
+        Propietario *propietarioCinco =new Propietario("Fernando","1016019137",true);
+        personas.push_back(propietarioCinco);
 
-            Bus*busCinco=new Bus("BUS777",38,propietarioCinco);
-            vehiculos.push_back(busCinco);
+        Bus*busCinco=new Bus("BUS777",38,propietarioCinco);
+        vehiculos.push_back(busCinco);
 
-            std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
+        std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
 
-        }
-        catch (const std::exception& e) {
-            std::cout << "Error en Caso 5: " << e.what() << std::endl;
-        }
-        std::cout << "\nPresione Enter para continuar...";
-        std::getline(std::cin, pausa);  
-        std::cout<<"____________________________________________________________________________________"<<std::endl;
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 5: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+    // caso 6
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"Caso6: Camion CAM301 de 3 ejes, sin propieta- rio. Cuanto paga?"<<std::endl;
+    try{
+        Camion *camionSeis=new Camion("CAM301",3);
+        vehiculos.push_back(camionSeis);
+        std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 6: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
 
     
     // limpiamos todo 
