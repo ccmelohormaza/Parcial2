@@ -86,7 +86,16 @@ int main() {
             }
         }
     } while (opcion!=0);
+    
+    for (Vehiculo* v : vehiculos) {
+        delete v;
+    }
+    vehiculos.clear();
 
+    for (Persona* p : personas) {
+        delete p;
+    }
+    personas.clear();
     
     return 0;
 }
