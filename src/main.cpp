@@ -159,7 +159,7 @@ int main() {
 
     // caso 8
     std::cout<<"\n____________________________________________________________________________________\n";
-    std::cout<<"Crear un carro con la placa vacía. Que excepcion se lanza?"<<std::endl;
+    std::cout<<"Caso:8 Crear un carro con la placa vacía. Que excepcion se lanza?"<<std::endl;
     try{
         Carro *carroOcho=new Carro("",2);
     }
@@ -172,7 +172,7 @@ int main() {
 
     // caso 9
     std::cout<<"\n____________________________________________________________________________________\n";
-    std::cout<<"Crear un camion de 1 eje. Que excepcion se lanza?"<<std::endl;
+    std::cout<<"Caso:9 Crear un camion de 1 eje. Que excepcion se lanza?"<<std::endl;
     try{
         Camion * caomionNueve =new Camion("CAM524",1);
     }
@@ -182,6 +182,39 @@ int main() {
     std::cout << "\nPresione Enter para continuar...";
     std::getline(std::cin, pausa);  
     std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+    // caso 10
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"caso10: Pasan por la caseta los vehiculos de los casos 2, 3, 5 y 7. Cual es el recaudo total  y cuantos hay de cada categoria?" <<std::endl;
+    try{
+        //primero voy a revisar en que posicion estan los vehiculosd esa catergoria
+        for (size_t i = 0; i < vehiculos.size(); i++) {
+            std::cout << "Posicion [" << i << "]: " << *vehiculos[i]<<std::endl;
+        }
+        //creo el operador que controla la caseta 
+        Operador*operador=new Operador("Daniel","1015219165","1");
+        personas.push_back(operador);
+        Caseta* casetaUno =new Caseta(operador);
+        casetaUno->registrarPaso(vehiculos[0]);
+        casetaUno->registrarPaso(vehiculos[1]);
+        casetaUno->registrarPaso(vehiculos[3]);
+        casetaUno->registrarPaso(vehiculos[4]);
+
+        std::cout  << "Carros:" << casetaUno->getCantidadCarros()<<"\n";
+        std::cout  << "Motos:" << casetaUno->getCantidadMotos()<<"\n";
+        std::cout  << "Buses:" << casetaUno->getCantidadBuses()<<"\n";
+        std::cout  << "Camiones :" << casetaUno->getCantidadCamiones()<<"\n";
+        std::cout  << "Recaudo total:" << casetaUno->getRecuadoTotal()<<std::endl;
+        
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 10: " << e.what() << std::endl;
+    }
+
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
 
 
 
