@@ -71,8 +71,8 @@ int main() {
         Propietario *propietarioTres =new Propietario("Juan","1016019137",true);
         personas.push_back(propietarioTres);
 
-        Moto* motoUno= new Moto("XYZ45A",125,propietarioTres);
-        vehiculos.push_back(motoUno);
+        Moto* motoCasoTres= new Moto("XYZ45A",125,propietarioTres);
+        vehiculos.push_back(motoCasoTres);
 
         std::cout  <<"Respuesta:" << std::endl;
         std::cout  << *vehiculos[1] << " | Paga $" << vehiculos[1]->calcularPeaje() << std::endl;
@@ -85,6 +85,27 @@ int main() {
     std::cout << "\nPresione Enter para continuar...";
     std::getline(std::cin, pausa);  
     std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+
+    //caso 4 
+
+    std::cout<<"\n____________________________________________________________________________________\n";
+        std::cout<<"Caso4: Moto MOT650 de 650 cc, sin propietario. Cuanto paga? Es de alto cilindraje?"<<std::endl;
+        try{
+            Moto *motoCasoCuatro=new Moto("MOT650",650);
+            vehiculos.push_back(motoCasoCuatro);
+            std::cout  <<"Respuesta:" << std::endl;
+            std::cout << *vehiculos.back()<<"|"<< vehiculos[2]->esAltoCilindraje();
+            std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
+        }
+        catch (const std::exception& e) {
+            std::cout << "Error en Caso 4: " << e.what() << std::endl;
+        }
+        std::cout << "\nPresione Enter para continuar...";
+        std::getline(std::cin, pausa);  
+        std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+
 
 
     
