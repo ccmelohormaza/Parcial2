@@ -162,7 +162,6 @@ int main() {
     std::cout<<"Crear un carro con la placa vacía. Que excepcion se lanza?"<<std::endl;
     try{
         Carro *carroOcho=new Carro("",2);
-        vehiculos.push_back(carroOcho);
     }
     catch (const std::exception& e) {
         std::cout << "Error en Caso 8: " << e.what() << std::endl;
@@ -170,6 +169,23 @@ int main() {
     std::cout << "\nPresione Enter para continuar...";
     std::getline(std::cin, pausa);  
     std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+    // caso 9
+    std::cout<<"\n____________________________________________________________________________________\n";
+    std::cout<<"Crear un camion de 1 eje. Que excepcion se lanza?"<<std::endl;
+    try{
+        Camion * caomionNueve =new Camion("CAM524",1);
+    }
+    catch (const std::exception& e) {
+        std::cout << "Error en Caso 9: " << e.what() << std::endl;
+    }
+    std::cout << "\nPresione Enter para continuar...";
+    std::getline(std::cin, pausa);  
+    std::cout<<"____________________________________________________________________________________"<<std::endl;
+
+
+
+
 
 
 
