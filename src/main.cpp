@@ -11,6 +11,7 @@
 #include "RegistroPaso.h"
 #include "Caseta.h"
 #include "Excepciones.h"
+#include <string>
 
 
 
@@ -41,6 +42,11 @@ int main() {
     std::vector <Vehiculo*> vehiculos;
     std::vector <Persona*> personas ;
 
+    //variables auxiliares
+    std::string pausa; // solo para que pare despues de cada punto 
+    Vehiculo* carroUno = nullptr;
+    Propietario* noVecino=nullptr;
+
     int opcion=-1;
     do {
         imprimirMenu();
@@ -50,23 +56,29 @@ int main() {
         {
             case 1:{
                 try {
-                    // creamos el propietario que no es vecino 
-                    Propietario*noVecino=new Propietario ("Carlitos","10100199258",false);
-                    personas.push_back(noVecino);
-                    
-                    // creamos el carro uno 
-                    Vehiculo* carroUno =new Carro ("ABC123",3,noVecino);
-                    vehiculos.push_back(carroUno);
+                    std::cout<<"\n---------------ejecutando caso 1----------------"<<std::endl;
 
+                    if (noVecino==nullptr){
+                       noVecino=new Propietario("Carlitos","1010019128",false);
+                       personas.push_back(noVecino) ;
+                    }
+
+                    if (carroUno ==nullptr){
+                        carroUno=new Carro ("ABC123",3,noVecino);
+                        vehiculos.push_back(carroUno);
+                    }
+                    else{
+                        carroUno->setPropietario(noVecino);
+                    }
+                        
                     // calculamos cuanto psga y imprimimos en la misma funcion
-                    std::cout<< "Caso 1: "<<*carroUno<< " Paga $"<< carroUno->calcularPeaje()<< std::endl;
+                    std::cout<<"\nCaso 1: "<<*carroUno<< " Paga $"<< carroUno->calcularPeaje()<< std::endl;
+                    std::cout<<"\n---------------Fin caso 1 ------------------------"<<std::endl;
 
                 }
                 catch (const std::exception& e){
                     std::cout << "Caso 1: Error -> " << e.what() << std::endl;
                 }
-                
-                
                 break;}
             case 2:{break;}
             case 3:{break;}
@@ -85,6 +97,13 @@ int main() {
                 break;
             }
         }
+        if (opcion!=0){
+            std::cout<<"\n presiona enter para continuar";
+            std::cin.ignore(1000,'\n');
+            std::getline(std::cin,pausa);
+        }
+        
+
     } while (opcion!=0);
     
     for (Vehiculo* v : vehiculos) {
