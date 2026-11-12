@@ -1,4 +1,17 @@
 #include <iostream>
+#include "Vehiculo.h"
+#include "Carro.h"
+#include "Moto.h"
+#include "Bus.h"
+#include "Camion.h"
+#include "Persona.h"
+#include "Operador.h"
+#include "Propietario.h"
+#include "RegistroPaso.h"
+#include "Caseta.h"
+#include "Excepciones.h"
+
+
 
 void imprimirMenu(){
     std::cout<<"___SELECCIONA EL CASO DE EVALUACION ___"<< std::endl;
