@@ -159,14 +159,13 @@ int main() {
 
     // caso 8
     std::cout<<"\n____________________________________________________________________________________\n";
-    std::cout<<"Caso7: El mismo camion despues de agregarle un eje. Cuanto paga?"<<std::endl;
+    std::cout<<"Crear un carro con la placa vacía. Que excepcion se lanza?"<<std::endl;
     try{
-        //volvemos a convertir en camion 
-        ((Camion*)vehiculos.back())->agregarEje();
-        std::cout<<*vehiculos.back()<< " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl; 
+        Carro *carroOcho=new Carro("",2);
+        vehiculos.push_back(carroOcho);
     }
     catch (const std::exception& e) {
-        std::cout << "Error en Caso 7: " << e.what() << std::endl;
+        std::cout << "Error en Caso 8: " << e.what() << std::endl;
     }
     std::cout << "\nPresione Enter para continuar...";
     std::getline(std::cin, pausa);  
