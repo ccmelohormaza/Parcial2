@@ -95,17 +95,17 @@ int main() {
             Moto *motoCasoCuatro=new Moto("MOT650",650);
             vehiculos.push_back(motoCasoCuatro);
             std::cout  <<"Respuesta:" << std::endl;
-            std::cout << *vehiculos.back()<<"|"<< vehiculos[2]->esAltoCilindraje();
+        
             std::cout  << *vehiculos.back() << " | Paga $" << vehiculos.back()->calcularPeaje() << std::endl;
+            std::cout << "Alto cilindraje: " << (((Moto*)vehiculos[2])->esAltoCilindraje() ? "Si" : "No")<< std::endl;
         }
+
         catch (const std::exception& e) {
             std::cout << "Error en Caso 4: " << e.what() << std::endl;
         }
         std::cout << "\nPresione Enter para continuar...";
         std::getline(std::cin, pausa);  
         std::cout<<"____________________________________________________________________________________"<<std::endl;
-
-
 
 
     
