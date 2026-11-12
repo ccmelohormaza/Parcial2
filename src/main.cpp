@@ -184,6 +184,7 @@ int main() {
     std::cout<<"____________________________________________________________________________________"<<std::endl;
 
     // caso 10
+    Caseta* casetaUno = nullptr;
     std::cout<<"\n____________________________________________________________________________________\n";
     std::cout<<"caso10: Pasan por la caseta los vehiculos de los casos 2, 3, 5 y 7. Cual es el recaudo total  y cuantos hay de cada categoria?" <<std::endl;
     try{
@@ -191,7 +192,7 @@ int main() {
         //creo el operador que controla la caseta 
         Operador*operador=new Operador("Daniel","1015219165","1");
         personas.push_back(operador);
-        Caseta* casetaUno =new Caseta(operador);
+        casetaUno =new Caseta(operador);
         casetaUno->registrarPaso(vehiculos[0]);
         casetaUno->registrarPaso(vehiculos[1]);
         casetaUno->registrarPaso(vehiculos[3]);
@@ -230,18 +231,12 @@ int main() {
     std::getline(std::cin, pausa);  
     std::cout<<"____________________________________________________________________________________"<<std::endl;
 
-        // caso 12
+    // caso 13
     std::cout<<"\n____________________________________________________________________________________\n";
-    std::cout<<"caso12: El operador declara 1000 menos que el recaudo del caso 10. Que ocurre?" <<std::endl;
-    std::cout<<"R7 fue omitido en el trabajo ";
-    std::cout << "\nPresione Enter para continuar...";
-    std::getline(std::cin, pausa);  
-    std::cout<<"____________________________________________________________________________________"<<std::endl;
-
+    std::cout<<"caso13 :Al terminar el programa se libera la caseta y luego los vehículos del caso 10 a través de Vehículo *. ¿En qué orden aparecen los mensajes de destrucción?" <<std::endl;
     
-
-
-
+    delete casetaUno;
+    casetaUno=nullptr;
     
     // limpiamos todo 
     for (Vehiculo* v : vehiculos) {
