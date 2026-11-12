@@ -46,6 +46,7 @@ int main() {
     std::string pausa; // solo para que pare despues de cada punto 
     Vehiculo* carroUno = nullptr;
     Propietario* noVecino=nullptr;
+    Propietario* vecino=nullptr;
 
     int opcion=-1;
     do {
@@ -77,6 +78,23 @@ int main() {
                 }
                 case 2:{
                     std::cout<<"\n---------------ejecutando caso 2----------------"<<std::endl;
+                    if (vecino==nullptr){
+                        vecino=new Propietario("Maria","1010019125",true);
+                        personas.push_back(vecino);
+                    }
+
+                    if(carroUno==nullptr){
+                        carroUno=new Carro("ABC123",3,vecino);
+                        vehiculos.push_back(carroUno);
+                    }
+                    else {
+                        carroUno->setPropietario(vecino);
+                    }
+                    std::cout<<"\nCaso 2: "<<*carroUno<<" Paga $"<<carroUno->calcularPeaje()<<std::endl;
+
+
+
+
                     std::cout<<"\n---------------Fin caso 2 ------------------------"<<std::endl;
                     break;
                 
