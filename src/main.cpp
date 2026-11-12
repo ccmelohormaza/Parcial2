@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "Vehiculo.h"
 #include "Carro.h"
 #include "Moto.h"
@@ -33,7 +34,13 @@ void imprimirMenu(){
     
 }
 
+
 int main() {
+
+    // CREAMOS LOS VECTORES QUE MENCIONA EL C3
+    std::vector <Vehiculo*> personas;
+    std::vector <Persona*> vehiculos;
+
     int opcion=-1;
     do {
         imprimirMenu();
@@ -41,7 +48,11 @@ int main() {
         std::cout<<std::endl;
         switch (opcion)
         {
-            case 1:{break;}
+            case 1:{
+            
+                
+                
+                break;}
             case 2:{break;}
             case 3:{break;}
             case 4:{break;}
