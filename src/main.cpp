@@ -75,18 +75,62 @@ int main() {
                     std::cout<<"\n---------------Fin caso 1 ------------------------"<<std::endl;
                     break;
                 }
-                case 2:{break;}
-                case 3:{break;}
-                case 4:{break;}
-                case 5:{break;}
-                case 6:{break;}
-                case 7:{break;}
-                case 8:{break;}
-                case 9:{break;}
-                case 10:{break;}
-                case 11:{break;}
-                case 12:{break;}
-                case 13:{break;}
+                case 2:{
+                    std::cout<<"\n---------------ejecutando caso 2----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 2 ------------------------"<<std::endl;
+                    break;
+                
+                }
+                case 3:{
+                    std::cout<<"\n---------------ejecutando caso 3----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 3 ------------------------"<<std::endl;
+                    break;
+                }
+                case 4:{
+                    std::cout<<"\n---------------ejecutando caso 4----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 4 ------------------------"<<std::endl;
+                    break;
+
+                }
+                case 5:{
+                    std::cout<<"\n---------------ejecutando caso 5----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 5 ------------------------"<<std::endl;
+                    break;
+                }
+                case 6:{                  
+                    std::cout<<"\n---------------ejecutando caso 6----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 6 ------------------------"<<std::endl;
+                    break;
+                }
+                case 7:{                
+                    std::cout<<"\n---------------ejecutando caso 7----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 7 ------------------------"<<std::endl;
+                    break;}
+                case 8:{                
+                    std::cout<<"\n---------------ejecutando caso 8----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 8 ------------------------"<<std::endl;
+                    break;}
+                case 9:{                
+                    std::cout<<"\n---------------ejecutando caso 9----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 9 ------------------------"<<std::endl;
+                    break;}
+                case 10:{               
+                    std::cout<<"\n---------------ejecutando caso 10----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 10 ------------------------"<<std::endl;
+                    break;}
+                case 11:{               
+                    std::cout<<"\n---------------ejecutando caso 11----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 11 ------------------------"<<std::endl;
+                    break;}
+                case 12:{               
+                    std::cout<<"\n---------------ejecutando caso 12----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 12 ------------------------"<<std::endl;
+                    break;}
+                case 13:{               
+                    std::cout<<"\n---------------ejecutando caso 13----------------"<<std::endl;
+                    std::cout<<"\n---------------Fin caso 13 ------------------------"<<std::endl;
+                    break;}
+
                 case 0:{break;}
                 default:{
                     std::cout<<"la opcion seleccionada no existe "<<std::endl;
@@ -109,7 +153,7 @@ int main() {
     while (opcion!=0);
     
     // libero la memoria 
-    
+
     for (Vehiculo* v : vehiculos) {
         delete v;
     }
