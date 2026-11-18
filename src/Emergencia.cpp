@@ -1,8 +1,8 @@
 #include "Emergencia.h"
-Emergencia::Emergencia(std::string unidad,std::string descripcion,bool enEmergencia ){
+Emergencia::Emergencia(std::string unidad,std::string descripcion ){
     this->unidad=unidad;
     this->descripcion=descripcion;
-    this->enEmergencia=enEmergencia;
+    this->enEmergencia=false;
 }
 
 // setters 

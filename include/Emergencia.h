@@ -8,7 +8,7 @@ class Emergencia{
     bool enEmergencia; 
     public:
     // construcctor
-    Emergencia (std::string unidad,std::string descripcion,bool enEmergencia );
+    Emergencia (std::string unidad,std::string descripcion);
     // setters 
     void setUnidad(std::string unidad);
     void setDescripcion(std::string descripcion);
